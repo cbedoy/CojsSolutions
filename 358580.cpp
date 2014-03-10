@@ -1,0 +1,2 @@
+#include <iostream>
+using namespace std;int algoritmo(int n, int c);int main(){int i, j;while(cin>>i>>j){cout<<i<<" "<<j<<" ";int may = 0;if(i > j){int aux = i;i = j;j = aux;}for(int k = i; k <= j; k++){int a = algoritmo(k, 0);if(a > may)may = a;}cout<<may<<endl;}cin>>i;return 0;}int algoritmo(int n, int c){if(n != 1)if(n % 2 == 1)return algoritmo(3 * n + 1, c + 1) ;else return algoritmo(n / 2, c + 1);return c + 1;}
